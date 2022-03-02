@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/FCC-React-Clock/static/css/main.78ad9659.css",
+    "main.js": "/FCC-React-Clock/static/js/main.2c732ff5.js",
+    "index.html": "/FCC-React-Clock/index.html",
+    "main.78ad9659.css.map": "/FCC-React-Clock/static/css/main.78ad9659.css.map",
+    "main.2c732ff5.js.map": "/FCC-React-Clock/static/js/main.2c732ff5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.78ad9659.css",
+    "static/js/main.2c732ff5.js"
+  ]
+}
