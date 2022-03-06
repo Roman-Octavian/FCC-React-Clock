@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import './styles.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 let timer;
 
@@ -152,24 +153,32 @@ class Timer extends React.Component {
     render() {
         return(
             <div id="timer">
-                <div id="break-label">
-                    <p>Break Length</p>
-                    <button onClick={() => {this.increment("break-increment")}} id="break-increment">+</button>
-                    <p id="break-length">{this.state.bl}</p>
-                    <button onClick={() => {this.decrement("break-decrement")}} id="break-decrement">-</button>
-                </div>
+                <h1 id="session-heading" className="display-1">25 + 5 CLOCK</h1>
+                <div id="session-div">
+                    <div id="break-label">
+                        <p id="break-text" className="label-text">Break Length</p>
+                        <button onClick={() => {this.increment("break-increment")}} id="break-increment" className="btn btn-light">+</button>
+                        <p id="break-length" className="display-6">{this.state.bl}</p>
+                        <button onClick={() => {this.decrement("break-decrement")}} id="break-decrement" className="btn btn-dark">-</button>
+                    </div>
 
-                <div id="session-label">
-                    <p>Session Length</p>
-                    <button onClick={() => {this.increment("session-increment")}} id="session-increment">+</button>
-                    <p id="session-length">{this.state.sl}</p>
-                    <button onClick={() => {this.decrement("session-decrement")}} id="session-decrement">-</button>
+                    <div id="timer-circle">
+                        <div id="timer-label">Session</div>
+                        <div id="time-left">{this.formatTime()}</div>
+                    </div>
+
+                    <div id="session-label">
+                        <p id="session-text" className="label-text">Session Length</p>
+                        <button onClick={() => {this.increment("session-increment")}} id="session-increment" className="btn btn-light">+</button>
+                        <p id="session-length" className="display-6">{this.state.sl}</p>
+                        <button onClick={() => {this.decrement("session-decrement")}} id="session-decrement" className="btn btn-dark">-</button>
+                    </div>
+
                 </div>
-                
-                <div id="timer-label">Session</div>
-                <div id="time-left">{this.formatTime()}</div>
-                <button onClick={() => {this.toggle()}} id="start_stop">START</button>
-                <button onClick={this.reset} id="reset">RESET</button>
+                <div id="buttons">
+                    <button onClick={() => {this.toggle()}} id="start_stop" className="btn btn-primary btn-lg">START</button>
+                    <button onClick={this.reset} id="reset" className="btn btn-danger btn-lg">RESET</button>
+                </div>
                 <audio src={process.env.PUBLIC_URL + '/beep.wav'} id="beep"></audio>
             </div>
         )
