@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/FCC-React-Clock/static/css/main.e0eb9871.css",
+    "main.css": "/FCC-React-Clock/static/css/main.2084c14a.css",
     "main.js": "/FCC-React-Clock/static/js/main.62b53a0e.js",
     "index.html": "/FCC-React-Clock/index.html",
-    "main.e0eb9871.css.map": "/FCC-React-Clock/static/css/main.e0eb9871.css.map",
+    "main.2084c14a.css.map": "/FCC-React-Clock/static/css/main.2084c14a.css.map",
     "main.62b53a0e.js.map": "/FCC-React-Clock/static/js/main.62b53a0e.js.map"
   },
   "entrypoints": [
-    "static/css/main.e0eb9871.css",
+    "static/css/main.2084c14a.css",
     "static/js/main.62b53a0e.js"
   ]
 }
