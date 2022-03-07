@@ -156,10 +156,10 @@ class Timer extends React.Component {
                 <h1 id="session-heading" className="display-1">25 + 5 CLOCK</h1>
                 <div id="session-div">
                     <div id="break-label">
-                        <p id="break-text" className="label-text">Break Length</p>
-                        <button onClick={() => {this.increment("break-increment")}} id="break-increment" className="btn btn-light">+</button>
-                        <p id="break-length" className="display-6">{this.state.bl}</p>
-                        <button onClick={() => {this.decrement("break-decrement")}} id="break-decrement" className="btn btn-dark">-</button>
+                        <p id="break-text" className="label-text control-element">Break Length</p>
+                        <button onClick={() => {this.increment("break-increment")}} id="break-increment" className="btn btn-light control-element">+</button>
+                        <p id="break-length" className="display-6 control-element">{this.state.bl}</p>
+                        <button onClick={() => {this.decrement("break-decrement")}} id="break-decrement" className="btn btn-dark control-element">-</button>
                     </div>
 
                     <div id="timer-circle">
@@ -168,10 +168,10 @@ class Timer extends React.Component {
                     </div>
 
                     <div id="session-label">
-                        <p id="session-text" className="label-text">Session Length</p>
-                        <button onClick={() => {this.increment("session-increment")}} id="session-increment" className="btn btn-light">+</button>
-                        <p id="session-length" className="display-6">{this.state.sl}</p>
-                        <button onClick={() => {this.decrement("session-decrement")}} id="session-decrement" className="btn btn-dark">-</button>
+                        <p id="session-text" className="label-text control-element">Session Length</p>
+                        <button onClick={() => {this.increment("session-increment")}} id="session-increment" className="btn btn-light control-element">+</button>
+                        <p id="session-length" className="display-6 control-element">{this.state.sl}</p>
+                        <button onClick={() => {this.decrement("session-decrement")}} id="session-decrement" className="btn btn-dark control-element">-</button>
                     </div>
 
                 </div>
