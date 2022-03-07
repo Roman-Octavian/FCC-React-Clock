@@ -10,6 +10,10 @@
     padding: 0;
 }
 
+#root {
+    background-image: radial-gradient(circle, #1CB5E0 0%, #000851 100%);
+}
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -21,12 +25,13 @@ html {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: radial-gradient(circle, #1CB5E0 0%, #000851 100%);
 }
 
 #session-div {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 #session-heading {
@@ -47,6 +52,7 @@ html {
 
 #break-label, #session-label {
     display: flex;
+    width: 15rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -58,7 +64,30 @@ html {
 }
 
 #break-increment, #break-decrement, #session-increment, #session-decrement {
-    font-size: 1.5rem;
+    text-align: center;
+    background-color: transparent;
+    font-size: 4rem;
+}
+
+#break-decrement, #session-decrement {
+    color: white;
+}
+
+@keyframes hover-transform {
+    0% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1.3);
+    }
+}
+
+#break-increment:hover, #break-decrement:hover, #session-increment:hover, #session-decrement:hover, #start_stop:hover, #reset:hover  {
+    animation-name: hover-transform;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
+    outline: none;
+    box-shadow: none;
 }
 
 .label-text {
@@ -78,5 +107,20 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 1vw;
+    column-gap: 3rem;
+}
+
+#start_stop, #reset {
+    font-size: 2rem;
+    height: 4rem;
+    width: 7rem;
+    border: 1px solid black;
+}
+
+#reset {
+    font-size: 2rem;
+    height: 4rem;
+    width: 7rem;
+    border: 1px solid white;
+    color: white;
 }

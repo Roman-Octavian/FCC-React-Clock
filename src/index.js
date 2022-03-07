@@ -2,6 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import './styles.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faForwardStep } from '@fortawesome/free-solid-svg-icons';
+import { faRotateRight } from '@fortawesome/free-solid-svg-icons';
+import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
+import { faCircleMinus } from '@fortawesome/free-solid-svg-icons';
 
 let timer;
 
@@ -156,10 +161,10 @@ class Timer extends React.Component {
                 <h1 id="session-heading" className="display-1">25 + 5 CLOCK</h1>
                 <div id="session-div">
                     <div id="break-label">
-                        <p id="break-text" className="label-text control-element">Break Length</p>
-                        <button onClick={() => {this.increment("break-increment")}} id="break-increment" className="btn btn-light control-element">+</button>
+                        <p id="break-text" className="label-text control-element">Break Length</p>          
+                        <button onClick={() => {this.increment("break-increment")}} id="break-increment" className="btn control-element"><FontAwesomeIcon icon={faCirclePlus} /></button>
                         <p id="break-length" className="display-6 control-element">{this.state.bl}</p>
-                        <button onClick={() => {this.decrement("break-decrement")}} id="break-decrement" className="btn btn-dark control-element">-</button>
+                        <button onClick={() => {this.decrement("break-decrement")}} id="break-decrement" className="btn control-element"><FontAwesomeIcon icon={faCircleMinus} /></button>
                     </div>
 
                     <div id="timer-circle">
@@ -169,15 +174,15 @@ class Timer extends React.Component {
 
                     <div id="session-label">
                         <p id="session-text" className="label-text control-element">Session Length</p>
-                        <button onClick={() => {this.increment("session-increment")}} id="session-increment" className="btn btn-light control-element">+</button>
+                        <button onClick={() => {this.increment("session-increment")}} id="session-increment" className="btn control-element"><FontAwesomeIcon icon={faCirclePlus} /></button>
                         <p id="session-length" className="display-6 control-element">{this.state.sl}</p>
-                        <button onClick={() => {this.decrement("session-decrement")}} id="session-decrement" className="btn btn-dark control-element">-</button>
+                        <button onClick={() => {this.decrement("session-decrement")}} id="session-decrement" className="btn control-element"><FontAwesomeIcon icon={faCircleMinus} /></button>
                     </div>
 
                 </div>
                 <div id="buttons">
-                    <button onClick={() => {this.toggle()}} id="start_stop" className="btn btn-primary btn-lg">START</button>
-                    <button onClick={this.reset} id="reset" className="btn btn-danger btn-lg">RESET</button>
+                    <button onClick={() => {this.toggle()}} id="start_stop" className="btn"><FontAwesomeIcon icon={faForwardStep} /></button>
+                    <button onClick={this.reset} id="reset" className="btn"><FontAwesomeIcon icon={faRotateRight} /></button>
                 </div>
                 <audio src={process.env.PUBLIC_URL + '/beep.wav'} id="beep"></audio>
             </div>
